@@ -1,0 +1,87 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+hr {
+    width: 30%;
+    border-color: red;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Ensure items stay in one row */
+    justify-content: start;
+    margin-top: 10px;
+    gap: 2.5vh;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari */
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Smooth infinite scrolling effect */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.scroll-container {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    gap: 20px;
+}
+
+/* Stop scrolling on hover */
+.cards:hover .scroll-container {
+    animation-play-state: paused;
+}
+
+.skill-card {
+    height: 10vw;
+    width: 10vw;
+    background-color: #3d3e42;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    transition: all ease 0.5s;
+    flex: 0 0 auto; /* Ensure it doesn't shrink */
+}
+
+.skill-card:hover {
+    background-color: #fec86a;
+}
+
+.skill-card img {
+    height: 4vw;
+    width: 4vw;
+    object-fit: contain;
+}
+
+.skill-card h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fbfbfb;
+}

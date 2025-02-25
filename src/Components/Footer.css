@@ -1,0 +1,68 @@
+.footer-container {
+    background-color:#0a1128;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .social-icons p {
+    margin-right: 10px;
+  }
+  
+  .icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+  
+  .icon:hover {
+    color: #ffa500; /* Change color on hover */
+  }
+
+  .copyright {
+    flex: 1; /* Take up remaining space */
+  }
+
+/* Add this to Footer.css */
+.back-to-top-left {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+  }
+  
+  .back-to-top {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-to-top:hover .tooltip {
+    opacity: 1;
+  }
+  
+  

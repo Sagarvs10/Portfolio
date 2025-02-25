@@ -1,0 +1,162 @@
+/* Background and Main Layout */
+.about-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Full screen height */
+  padding: 50px 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Bio Heading */
+.bio-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+  position:relative;
+  
+}
+
+/* Bio Subtext */
+.bio-subtext {
+  font-size: 1.2rem;
+  color: #a8a8a8;
+  font-style: italic;
+  margin-top: 10px;
+  
+}
+
+/* Floating Shapes */
+.floating-shapes .shape {
+  position: absolute;
+  opacity: 0.6;
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+.shape.circle {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #6a11cb, #2575fc);
+  border-radius: 50%;
+  top: 10%;
+  left: 15%;
+}
+
+.shape.hexagon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #ff9966, #ff5e62);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  top: 80%;
+  right: 10%;
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid #ff0080;
+  top: 30%;
+  right: 20%;
+}
+
+.shape.small-circle {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #02aab0, #00cdac);
+  border-radius: 50%;
+  bottom: 10%;
+  left: 25%;
+}
+
+.shape.big-circle {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #6a11cb, #2575fc);
+  border-radius: 50%;
+  bottom: 5%;
+  right: 35%;
+}
+
+.shape.small-triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #ffea00;
+  bottom: 20%;
+  left: 45%;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Scroll Down Indicator */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-down p{
+  color: white;
+}
+
+.scroll-icon {
+  width: 20px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 15px;
+  margin-top: 5px;
+  position: relative;
+  animation: scroll 1.5s infinite;
+}
+
+.scroll-icon::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-dot 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes scroll-dot {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 25px;
+  }
+}
